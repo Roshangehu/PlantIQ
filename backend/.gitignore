@@ -1,0 +1,7 @@
+.env
+.venv
+
+__pycache__
+
+# Block local SQLite databases
+*.db
