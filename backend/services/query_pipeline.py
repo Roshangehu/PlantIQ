@@ -1,21 +1,53 @@
-def pipeline(question: str) -> str:
+import os
 
-    """
-    Main PlantIQ query pipeline.
+from groq import Groq
+from dotenv import load_dotenv
 
-    Future steps:
-    1. Process the question.
-    2. Generate question embeddings.
-    3. Retrieve relevant document chunks.
-    4. Retrieve related equipment information.
-    5. Build context.
-    6. Generate an answer using an LLM.
-    """
+load_dotenv()
 
-    answer = (
-        f"PlantIQ received your question: {question}. "
-        "The query pipeline is working. "
-        "AI processing will be integrated next."
+client = Groq(
+    api_key=os.getenv("GROQ_API_KEY")
+)
+
+MODEL_NAME = "openai/gpt-oss-20b"
+
+
+def pipeline(question: str, history: list = None) -> str:
+
+    if history is None:
+        history = []
+
+    messages = [
+        {
+            "role": "system",
+            "content": (
+                "You are PlantIQ, an AI-powered industrial "
+                "maintenance assistant. "
+                "Answer questions clearly and accurately. "
+                "Explain technical concepts in simple language. "
+                "Never invent equipment specifications or "
+                "present uncertain advice as verified "
+                "safety instructions."
+            )
+        }
+    ]
+
+    # Add previous conversation
+    messages.extend(history)
+
+    # Add the latest question
+    messages.append({
+        "role": "user",
+        "content": question
+    })
+
+    response = client.chat.completions.create(
+        model=MODEL_NAME,
+        messages=messages,
+        temperature=0.3,
+        max_completion_tokens=1024
     )
+
+    answer = response.choices[0].message.content
 
     return answer

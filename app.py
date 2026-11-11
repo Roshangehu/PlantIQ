@@ -4,7 +4,7 @@ from frontend.components.sidebar import render_sidebar
 from frontend.components.chat_interface import render_chat_interface
 from frontend.state.chat_state import initialize_chat
 from frontend.components.blueprint_view import render_blueprint_view
-
+from backend.database.connection import initialize_database
 # Page configuration
 st.set_page_config(
     page_title="PlantIQ | Maintenance Assistant",
@@ -25,6 +25,8 @@ def load_css():
 
 # Initialize application
 load_css()
+
+initialize_database()
 initialize_chat()
 
 # Render components
