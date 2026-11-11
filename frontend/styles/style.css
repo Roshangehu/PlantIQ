@@ -1,0 +1,32 @@
+/* Main application background */
+.stApp {
+    background-color: #0E1117;
+    color: #FAFAFA;
+}
+
+/* Main title */
+h1 {
+    color: #E6EDF3;
+    font-weight: 700;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #161B22;
+}
+
+/* Chat input */
+.stChatInput {
+    border-radius: 12px;
+}
+
+/* Buttons */
+.stButton button {
+    border-radius: 8px;
+    border: 1px solid #30363D;
+}
+
+/* General text */
+p {
+    color: #D1D5DB;
+}
