@@ -16,7 +16,13 @@ def chat(request: ChatRequest):
 
     question = request.question
 
-    # Pass the question to the AI pipeline
-    answer = pipeline(question)
+    # Convert previous messages into dictionaries
+    history = [
+        message.model_dump()
+        for message in request.history
+    ]
+
+    # Pass BOTH question and conversation history
+    answer = pipeline(question, history)
 
     return ChatResponse(answer=answer)

@@ -1,0 +1,92 @@
+[
+    {
+        "equipment_id": "V-102",
+        "name": "Storage Vessel",
+        "type": "Vessel",
+        "description": "Stores process liquid before it moves to the next stage."
+    },
+    {
+        "equipment_id": "C-101",
+        "name": "Process Compressor",
+        "type": "Compressor",
+        "description": "Compresses process gas to increase its pressure."
+    },
+    {
+        "equipment_id": "M-101",
+        "name": "Electric Motor",
+        "type": "Motor",
+        "description": "Provides mechanical power to the connected equipment."
+    },
+    {
+        "equipment_id": "PCV-103",
+        "name": "Pressure Control Valve",
+        "type": "Control Valve",
+        "description": "Regulates process pressure by controlling fluid flow."
+    },
+    {
+        "equipment_id": "FT-104",
+        "name": "Flow Transmitter",
+        "type": "Instrumentation",
+        "description": "Measures and transmits process fluid flow measurements."
+    },
+    {
+        "equipment_id": "HX-201",
+        "name": "Heat Exchanger",
+        "type": "Heat Exchanger",
+        "description": "Transfers thermal energy between process fluids."
+    },
+    {
+        "equipment_id": "RX-202",
+        "name": "Process Reactor",
+        "type": "Reactor",
+        "description": "Provides a vessel for carrying out chemical reactions."
+    },
+    {
+        "equipment_id": "PSV-205",
+        "name": "Pressure Safety Valve",
+        "type": "Safety Valve",
+        "description": "Provides overpressure protection by releasing pressure under designed conditions."
+    },
+    {
+        "equipment_id": "TT-203",
+        "name": "Temperature Transmitter",
+        "type": "Instrumentation",
+        "description": "Measures and transmits process temperature."
+    },
+    {
+        "equipment_id": "PT-204",
+        "name": "Pressure Transmitter",
+        "type": "Instrumentation",
+        "description": "Measures and transmits process pressure."
+    },
+    {
+        "equipment_id": "CH-301",
+        "name": "Process Chiller",
+        "type": "Chiller",
+        "description": "Provides cooling for the process."
+    },
+    {
+        "equipment_id": "TCV-303",
+        "name": "Temperature Control Valve",
+        "type": "Control Valve",
+        "description": "Regulates temperature by controlling process flow."
+    },
+    {
+        "equipment_id": "P-302A",
+        "name": "Process Pump A",
+        "type": "Pump",
+        "description": "Transfers process fluid through the plant."
+    },
+    {
+        "equipment_id": "P-302B",
+        "name": "Process Pump B",
+        "type": "Pump",
+        "description": "Provides an additional or standby pumping unit."
+    },
+    {
+        "equipment_id": "TK-401",
+        "name": "Storage Tank",
+        "type": "Tank",
+        "description": "Stores processed liquid for further use or distribution."
+    }
+]
